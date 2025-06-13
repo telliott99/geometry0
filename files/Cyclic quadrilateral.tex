@@ -1,0 +1,208 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Cyclic Quadrilateral}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\label{sec:quadrilateral_supplementary}
+
+There is a wonderfully simple theorem about quadrilaterals (Euclid III.22).  A cyclic quadrilateral is a four-sided polygon whose four vertices all lie on one circle.
+
+\begin{center} \includegraphics [scale=0.12] {EIII_22.png} \end{center}
+
+$\bullet$ \ For \emph{any} cyclic quadrilateral, the opposing angles are supplementary (they sum to two right angles).
+
+\emph{Proof}.
+
+Together, opposing angles in a cyclic quadrilateral exactly correspond to the whole arc of the circle.
+
+Since the central angle for that arc is four right angles, the sum of opposing inscribed angles is just one-half that or two right angles.
+
+$\square$
+
+Euclid's proof uses sum of angles:
+
+\begin{center} \includegraphics [scale=0.12] {EIII_22.png} \end{center}
+
+\emph{Proof}.
+
+$\angle ADC = \angle ADB + \angle BDC$, subtended by arcs $AB$ and $BC$.
+
+As angles on equal arcs (III.21) the latter two angles are equal to $\angle ACB$ and $\angle BAC$.
+
+But by I.32, the same two angles plus the total angle at vertex $B$ are equal to two right angles.
+
+$\square$
+
+\subsection*{converse of cyclic quadrilateral theorem}
+
+This one uses Euclid III.22 rather than III.21.  
+
+\label{sec:inscribed_angles_converse2}
+
+Let $\triangle ABC$ lie on a circle.  
+
+Let point $D$ be such that $\angle ADC$ is supplementary to $\angle ABC$.
+
+Then $D$ lies on the same circle.
+\begin{center} \includegraphics [scale=0.22] {cyclic_quad_converse_b} \end{center}
+
+\emph{Proof}.
+
+Aiming for a contradiction, suppose $D$ does not lie on the circle.
+
+Let $D$ be external and $D'$ lie on the point where $BD$ cuts the circle (right panel).  
+
+By the forward theorem, $\angle AD'C$ is supplementary to $\angle ABC$ and so equal to $\angle ADC$.
+
+But by Euclid I.21,  $\angle ADC < \angle AD'C$.  
+
+This is a contradiction.  Therefore $D$ is not external.  
+
+A similar argument will show that $D$ is not internal.  
+
+Therefore $D$ lies on the circle and $D$ and $D'$ are the same point.
+
+$\square$
+
+\subsection*{bisected angles and SSA}
+
+Take an arbitrary triangle and draw its circumcircle.  Bisect one angle say $\angle A$, and find where the bisector cuts the circle at $D$.
+
+\begin{center} \includegraphics [scale=0.3] {cq_SSA_crop} \end{center}
+
+We notice that since the arcs are equal, $CD = DB$, and with a shared side, we have SSA for the two triangles:  $\triangle ADC$ and $\triangle ABD$.
+
+These two triangles are obviously \emph{not} congruent.
+
+Yet they are related by SSA and if not congruent, we expect that the angles $\angle ACD$ and $\angle ABD$ are supplementary (see the chapter on congruence tests).
+
+But of course they are, since they are opposing vertices in a cyclic quadrilateral.
+
+We also have that $\triangle BCD$ is isosceles.
+
+If the arc for any of the angles is bisected then the line drawn to that point from the vertex is the angle bisector.
+
+The next problem is related to the previous discussion.
+
+\begin{center} \includegraphics [scale=0.75] {cq_problem.png} \end{center}
+
+Given that $ABDC$ is a cyclic quadrilateral.  Let $BD$ bisect $\angle CBE$.  Prove that $DC = DA$.
+
+\emph{Proof}.
+
+Let $\beta$ be one-half the bisected external angle so $\beta = \angle DBE = \angle DBC$.
+
+$\angle DAC$ is on arc $CD$ so $\angle DAC = \beta$ by inscribed angles on equal arcs.
+
+$\angle DCA$ is supplementary to $\angle ABD$ by the fundamental theorem of the cyclic quadrilateral.
+
+And then $\angle ABD$ is supplementary to $\beta$ on the straight line $ABE$.
+
+So $\angle DCA = \beta = \angle DAC$.
+
+It follows that $\triangle DCA$ is isosceles, with $DC = DA$.
+
+$\square$
+
+
+\subsection*{Brahmagupta's theorem}
+
+I have redrawn the figure from wikipedia.
+
+\url{https://en.wikipedia.org/wiki/Brahmagupta_theorem}
+
+\begin{center} \includegraphics [scale=0.75] {bg6.png} \end{center}
+
+$ABCD$ is a cyclic quadrilateral with diagonals that cross at right angles.
+
+Given $NM \perp AB$.  Show that $CK$ is bisected, with $CN = NK$.
+
+If the conclusion is true, then since $\triangle CDK$ is right, we should have that the median $ND$ is equal to the two halves of $CK$.  This suggests we try to prove that the two smaller triangles are isosceles.
+
+\emph{Proof}.
+
+The perpendicular $DM$ in right triangle $BDA$ forms two smaller similar right triangles:  $\triangle BDA \sim \triangle DMA \sim \triangle MBD$.
+
+In $\triangle DKN$, $\angle DKN = \angle ABC$ by inscribed angles on equal arcs.  
+
+But $\angle ABC = \angle ADM$ by the similar triangles just given, and then $\angle ADM = \angle NDK$ by vertical angles.
+
+Thus $\triangle NDK$ is isosceles, with $NK = ND$.
+
+For the same reason, $\triangle CND$ is also isosceles.  So then
+
+\[ CN = ND = NK \]
+
+$\square$
+
+\subsection*{Van Schooten's theorem}
+
+\begin{center} \includegraphics [scale=0.45] {Van_Schooten.png} \end{center}
+
+This is given as a problem by Surowski (1.3.6).
+
+Given an equilateral $\triangle ABC$ draw its circumcircle.
+
+Draw an arbitrary line segment from vertex $A$ through side $BC$ to meet the circle at $M$.  Prove that $AM = BM + MC$.
+
+\emph{Proof}.
+
+Draw lines from $M$ to each vertex of $\triangle ABC$ and extend $MB$ to give $MD = AM$.  Join $AD$.
+
+By inscribed angles both angles at $M$ are equal to two-thirds of a right angle.
+
+Since $MD = AM$, $\triangle AMD$ is isosceles with the vertex equal to two-thirds of a right angle.
+
+Thus $\triangle AMD$ is equilateral.   This accounts for all of the red dots.  ($\angle A$ is not marked, to keep the diagram simpler).
+
+Subtract the central $\angle MAB$ from two equal angles to yield $\angle CAM = \angle BAD$.
+
+\begin{center} \includegraphics [scale=0.45] {Van_Schooten.png} \end{center}
+
+$\triangle CAM \sim \triangle BAD$.
+
+But $AB = AC$ and also $AM = AD$, so $\triangle BAD \cong \triangle CAM$ by ASA or SAS.
+
+It follows that $BD = MC$.
+
+Thus $BD + MB = MC + MB$ and the former is equal to MD.
+
+$\square$
+
+This theorem is easy to prove using Ptolemy's theorem.  Ptolemy says that, in a cyclic quadrilateral, multiply the lengths of opposing sides and add the two products, and that is equal to the product of the diagonals.
+
+Here, let $AB = AC = BC = 1$.  Then Ptolemy says:
+\[ MC \cdot 1 + MB \cdot 1 = AM \cdot 1 \]
+\[ MC + MB = AM \]
+
+However, we don't have that quite yet.  So we did it as suggested.
+
+\subsection*{we have questions}
+
+I saw this question on the internet:  ``is a parallelogram a cyclic quadrilateral?''
+
+In a parallelogram, opposing angles are equal, while in a cyclic quadrilateral, opposing angles are supplementary.
+
+The only supplementary, equal angles are two right angles.  So a rectangle is the only parallelogram that is a cyclic quadrilateral.
+
+
+
+\end{document}

@@ -1,0 +1,120 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Euclid's Elements}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+In this chapter we will look at some early Propositions from Book I of Euclid's \emph{Elements}.
+
+\emph{Elements} was put together as a compendium of geometry for students.  One thing we will see is how the propositions build on one another to make a dependent chain.  This includes a more sophisticated proof of the isosceles triangle theorem that depends only on SAS.
+
+\subsection*{Euclid. I.4}
+
+\label{sec:Euclid_I_4}
+
+\begin{quote}If two triangles have two sides equal to two sides respectively, and have the angles contained by the equal straight lines equal, then they also have the base equal to the base, the triangle equals the triangle, and the remaining angles equal the remaining angles respectively, namely those opposite the equal sides.\end{quote}
+
+\begin{center} \includegraphics [scale=0.15] {EI_4.png} \end{center}
+
+This is a method for proving congruence (equality) of two triangles 
+\[ \triangle ABC \cong \triangle DEF \]
+
+In modern usage, we call the method SAS or \emph{side angle side}.  Given that $AB = DE$ and $AC = DF$ and that the angles between them at the vertices $A$ and $D$ are also equal, the two triangles are congruent:  all three angles and all three sides are equal.
+
+Euclid I.4 is a proof that SAS is correct.
+
+\emph{Proof}.
+
+The proof is by superposition.  The facts establish the positions of the points $B$ and $C$, which determines $BC$ and so the angles at vertices $B$ and $C$.
+
+Euclid says that if we lift up $\triangle ABC$ and lay it on top of $\triangle DEF$ then $B$ coincides with $E$ and $C$ coincides with $F$ so $BC = EF$.
+
+$\square$
+
+This seems perhaps a little shaky logically, and it's not a method of proof that Euclid uses much.
+
+But one might instead have taken this proposition as a postulate.  One source says that David Hilbert claims that under the hypotheses of the proposition it is true that the two base angles are equal, and then proves that the sides are equal.
+
+\subsection*{Euclid I.5}
+
+\label{sec:Euclid_I_5}
+
+The forward isosceles triangle theorem is that if two sides in a triangle are equal, then so are the opposing angles.  It's difficult precisely because Euclid proves it \emph{before} we know how to bisect an angle.
+
+\begin{center} \includegraphics [scale=0.18] {Euclid_I_5d.png} \end{center}
+
+Given $AB = AC$.  We will prove that the base angles are equal:  $\angle ABC = \angle ACB$.
+
+The image shows two copies of the triangle.  This is so that we may compare congruent triangles formed within the \emph{same} figure.
+
+\emph{Proof}.
+
+Extend $AB$ and $AC$ so that $AD = AE$.  
+\begin{center} \includegraphics [scale=0.18] {Euclid_I_5a.png} \end{center}
+
+Then $BD = CE$ by subtraction.  Connect $CD$ and $BE$.  
+
+\begin{center} \includegraphics [scale=0.18] {Euclid_I_5b.png} \end{center}
+
+$\triangle ACD \cong \triangle ABE$ by SAS ($AB = AC$, $AD = AE$, and they share the angle at vertex $A$).
+
+As a result, we have two more pairs of angles equal:  $\angle ADC = \angle AEB$ and $\angle ACD = \angle ABE$.  Also, $CD = BE$.
+
+\begin{center} \includegraphics [scale=0.18] {Euclid_I_5c.png} \end{center}
+
+Since $\angle ADC = \angle AEB$ and the flanking sides are equal, namely, $BD = CE$ and $CD = BE$, we have $\triangle BCD \cong \triangle CBE$ by SAS.
+
+It follows that $\angle DBC = \angle ECB$.  By supplementary angles, $\angle ABC = \angle ACB$.
+
+$\square$
+
+Notice how the original figure is extended to provide auxiliary shapes helpful in the proof.  This is a common theme.
+
+We will use both results ($\angle ABC = \angle ACB$ and $\angle DBC = \angle ECB$), going forward.
+
+To summarize:  in a triangle with two equal sides, the angles opposite those sides are also equal, as well as their supplementary angles.
+
+\subsection*{Euclid I.6}
+
+\label{sec:Euclid_I_6}
+
+We proved the converse of I.5 previously based on angle bisection.  Now that we have proved Euclid I.5, which provides the basis for bisection, this is logically solid.  Nevertheless, for completeness, here is Euclid's proof of I.6.  It is a \emph{Proof by Contradiction}.
+
+\begin{center} \includegraphics [scale=0.16] {Euclid_I_6.png} \end{center}
+
+\emph{Proof}.
+
+Given $\angle ABC = \angle ACB$.  Suppose $AB \ne AC$.  Then let one be less, say $AC$.  So cut off from $AB$ the length $BD = AC$.
+
+Compare $\triangle DBC$ with $\triangle ABC$.  We have the sides equal, namely $DB = AC$ and  $BC = BC$.  As well, $\angle DBC = \angle ACB$.  Therefore $\triangle ABC \cong \triangle DBC$ by Euclid I.4 (SAS).
+
+But this is absurd.  The part cannot be equal to the whole.
+
+Therefore, $AB = AC$.
+
+$\square$
+
+\subsection*{$\iff$}
+
+The theorem together with its converse says that, in an isosceles triangle, the base angles are equal $\iff$ the two sides sides are equal (not the base).  
+
+The symbol $\iff$ means \emph{if and only if}, so both base angles equal $\rightarrow$ two sides equal  \emph{and} two sides equal $\rightarrow$ base angles equal.
+
+\end{document}

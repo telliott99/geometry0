@@ -1,0 +1,43 @@
+# First
+
+Lines and angles
+Introduction
+Angles
+Parallel lines
+
+Congruence
+Congruent triangles
+Isosceles triangles
+Euclid's proof I.5
+Bisection
+Additional constructions
+
+Triangles and Area
+Right triangles
+Quadrilaterals
+Rectangles
+Parallelograms
+Altitudes
+Right triangle similarity
+Similar triangles
+
+Pythagorean theorem
+Simple proofs
+Euclid's proof of Pythagoras
+Pappus's proof
+Brief review
+
+Circles
+Circles and angles
+Inscribed angles
+Tangents
+Arcs of a circle
+Chords in a circle
+Cyclic quadrilateral
+Tangent secant theorem
+Power of a point
+Hippocrates
+
+Addendum
+List of Theorems
+Author's Notes
