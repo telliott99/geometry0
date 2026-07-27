@@ -1,0 +1,93 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Pythagorean Theorem:  Pappus}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+Pappus came up with a beautiful result which includes the Pythagorean theorem as a special case.  First, we need to recall a result about parallelograms, Euclid I.35.
+
+\begin{center} \includegraphics [scale=0.15] {EI_35.png} \end{center}
+
+If two parallelograms lie on the same base and with the opposite side on the same parallel, then they are equal in area.
+
+Here, the base $BC$ is shared.  However, sequential applications of the same theorem will show that the result obtains, even if neither of the opposing sides is shared.
+
+\subsection*{Pappus's parallelogram theorem}
+
+\label{sec:PProof_Pappus}
+
+In the figure below, on the two sides of any $\triangle ABC$ draw any parallelograms $ACDE$ and $BCFG$.  Extend the two new sides to meet at $H$.
+
+\begin{center} \includegraphics [scale=0.22] {Pappus_pgram1.png} \end{center}
+
+Draw $HC$ and its extension such that it cuts $AB$ at $T$ and then let $HC = TU$.
+
+Draw $AJ \parallel HCTU \parallel BI$ and $JUI \parallel ATB$.
+
+\emph{Proof}.
+
+First, $ABIJ$ is a parallelogram with $AJ = BI = TU$.
+
+The new parallelogram with $AC$ as one side and $RH$ the other, is equal, by our lemma.  $(ACDE) = (ACHR)$.  
+
+Since $RAJ \parallel HCTU$ and $RA = HC = TU = AJ$, $(ATUJ) = (ACHR)$ for the same reason.  
+
+So $(ATUJ) = (ACDE)$.
+
+We use the same argument for $(BCFG) = (TBIU)$ on the right.
+
+Then add the two results:  $(ACDE) + (BCFG) = (ABIJ)$.
+
+$\square$.
+
+Let $\angle ACB$ be a right angle, and let the parallelograms be squares.
+
+\begin{center} \includegraphics [scale=0.30] {Pappus_pgram2.png} \end{center}
+
+$\triangle DHC$ and $\triangle FHC$ are right triangles and they are congruent to $\triangle ABC$ by SAS.
+
+So $\angle CHF = \angle CAT$ and we also have vertical angles, so $\triangle HFC \sim \triangle CTA$.
+
+It follows that $\angle HFC = \angle CTA$ and both are right angles.
+
+Further, $CH = TU = AB$, so $ABIJ$ is the square on $AB$.
+
+It is easy to see that $(AEDC) = (ARHC) = (ATUJ)$, and the rest follows.
+
+Thus Pappus' theorem becomes the Pythagorean theorem as a special case.
+
+[ Reference:  George F. Simmons, \emph{Calculus Gems}. ]
+
+\subsection*{proof without words}
+
+%\begin{center} \includegraphics [scale=0.50] {pwow_pappus.png} \end{center}
+
+\begin{center} \includegraphics [scale=0.40] {pappus_panels.png} \end{center}
+
+[ Nelsen ]
+
+\subsection*{question}
+
+It might appear that this proof is not completely general because some choices for the parallelograms on sides $a$ and $b$ overlap at the top.  
+
+Why is this is not a problem?
+
+
+\end{document}

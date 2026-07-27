@@ -1,0 +1,112 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+
+\title{Fundamental similarity}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{problem}
+
+\begin{center} \includegraphics [scale=0.5] {similar23.png} \end{center}
+
+The problem states that the bases are parallel ($XY \parallel BC$) and also that the subdivision produces \emph{equal areas}.  We are asked to find the ratio $AX:XB$.
+
+\emph{Solution}.
+
+Recall from a previous chapter that for two similar triangles, the altitudes to corresponding sides are in the same ratio as any of the three pairs of sides themselves.  
+
+The altitudes $h$ and $H$ to $BC$ (not drawn) are also in the same ratio as the sides, so let $H = kh$ --- $H$ lies on $BC$.
+
+Then twice the area of the top triangle is $AX \cdot h$ and twice the area of the whole is $AB \cdot H = k AB \cdot h$
+
+We have that the whole is twice the smaller area so the ratio is equal to $2$:
+\[ \frac{k AB \cdot h}{AX \cdot h} = 2 \]
+But $AB/AX$ is also equal to $k$ so we have that $k^2 = 2$ and $k = \sqrt{2}$.
+
+However, we are not asked for $k$.  Instead, we want the ratio of $AX$ to the smaller piece along the bottom. Let $AX = a$.  Then the whole is $A = ka$.  The difference is the small piece, $XB = A - a = a(k - 1)$.  We need
+\[ \frac{a}{a(k - 1)} = \frac{1}{k - 1}  = \frac{1}{\sqrt{2} - 1} \]
+
+\subsection*{problem}
+
+Here's a problem from the web.  Given that $AC \parallel EF$ and $AB \parallel DF$.
+
+We are to prove that the sum of the altitudes of the small triangles is equal to the altitude of the large one.
+
+\begin{center} \includegraphics [scale=0.4] {prob_similar_tri2.png} \end{center}
+
+Informal solution:  The smaller triangles are all similar to $\triangle ABC$ by the alternate interior angles and vertical angle theorems.
+
+For similar triangles, not only are the sides in the same ratio to each other, but so are other measures like the altitudes to a particular side.  So if we label the bases $b_1$ etc., collectively $b_i$ , then we have that
+\[ \frac{b_i}{h_i} = \frac{b}{h} \]
+\[ b_i = b \cdot h_i/h \]
+for each of the $b_i$.
+
+But the sum of the $b_i$ is simply equal to $b$ so
+\[ b_1 + b_2 + b_3 = b \cdot (h_1/h + h_2/h + h_3/h) \]
+\[ b = b \cdot (h_1/h + h_2/h + h_3/h) \]
+\[ 1 = h_1/h + h_2/h + h_3/h \]
+\[ h = h_1 + h_2 + h_3 \]
+
+\subsection*{problem}
+
+Given two triangles that are not similar, where the ratio $AD/AB = r$ and $AE/AC = s$.  We are asked to show that 
+
+\[ \frac{\triangle_{ADE}}{\triangle_{ABC}} = rs \] 
+
+\begin{center} \includegraphics [scale=0.4] {similarity_by_area2.png} \end{center}
+
+\emph{Solution}.
+
+Draw $DF \parallel BC$.  Now $\triangle ADF \sim \triangle ABC$ so $AF/AC = r$.
+
+By our previous result
+\[ \frac{\triangle_{ADF}}{\triangle_{ABC}} = r^2 \] 
+
+Since $AE/AC = s$ and $AF/AC = r$, $AE/AF = s/r$.  As triangles with a common vertex and bases in that proportion, these areas are in the same proportion:
+
+\[ \frac{\triangle_{ADE}}{\triangle_{ADF}} = \frac{s}{r} \] 
+
+Multiply the two ratios together to obtain
+
+\[ \frac{\triangle_{ADE}}{\triangle_{ABC}} = sr \] 
+
+$\square$
+
+\emph{Solution}.  (alternate).
+
+\begin{center} \includegraphics [scale=0.4] {similarity_by_area2.png} \end{center}
+
+Looking ahead to trigonometry, in any triangle, twice the area can be computed as the product of two sides flanking an angle times the \emph{sine} of the angle.  (The reason is that the altitude to one side, divided by the length of the second side, is defined to be the sine of the angle.)
+
+\[ 2 (ADE) = AD \cdot AE \cdot \sin \angle DAE \]
+\[ 2 (ABC) = AB \cdot AC \cdot \sin \angle BAC \]
+
+But $\angle DAE = \angle BAC$, so they have the same sine, and the ratio of areas is just
+\[ \frac{AD \cdot AE}{AB \cdot AC} = rs \]
+
+$\square$
+
+To rework this proof in terms of familiar concepts, draw the altitude from $D$ to $AE$, and also the one from $B$ to $AC$
+
+They form similar right triangles including the angle at $A$.  The altitudes scale like $AD/AB = r$.  But the bases scale like $AE/AC = s$.  
+
+And area scales like the product of the two, namely, $rs$.
+
+
+
+\end{document}

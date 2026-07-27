@@ -1,0 +1,176 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Circles}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{diameters}
+
+\label{sec:diameter_of_a_circle}
+
+Pick some point to be the \emph{center} of a circle.  Then a circle contains all the points a specified distance away from the center.  That distance is called the \emph{radius}.  
+
+A circle is drawn with a compass, as we mentioned previously.
+\begin{center} 
+\includegraphics [scale=0.25] {compass.png} 
+\end{center}
+
+Euclid says:
+
+$\bullet$   Given any straight line segment, a circle can be drawn having the segment as radius and one endpoint as center.
+
+Suppose we start with the line segment $OP$ in the figure below, and choose $O$ as the center.  Place the needle point of the compass on $O$ and the pencil on $P$ and then draw the circle containing all the points the same distance from $O$ as $P$ is.
+
+\begin{center} \includegraphics [scale=0.3] {circle1.png} \end{center}
+
+Next, extend the radius $PO$ to meet the circle on the other side at $Q$.  This whole line segment $PQ$ is called a \emph{diameter} of the circle.
+
+
+$\bullet$   Any diameter divides the circle into two equal parts.  
+
+(Recall that we allow a mirror image of something to be called equal to itself).  So then, if we take the bottom half and flip it vertically, we claim the two halves are exactly equal.
+
+\begin{center} \includegraphics [scale=0.3] {circle2.png} \end{center}
+
+\emph{Proof}.
+
+The proof is by contradiction.  Lay the two pieces on top of one another.  The diameters of the half-circle are duplicates of the original.  Thus, they are equal to each other and each half is equal to one radius.
+
+We suppose that, somewhere, at some point, the two half-circles are not identical.  
+
+Then there will be some radial line we can draw from $O$ through the two half circles, where the line meets the two curves at different distances from the center, because they are supposed to be different.  This will identify points on the same radius of each half-circle that lie at a different distance from the center.
+
+But then, the original figure could not be a circle, because all radii of a circle are equal.
+
+This is a contradiction.  Hence any diameter divides the circle into two equal parts, called semi-circles.
+
+$\square$
+
+\subsection*{circle containing three points}
+
+\label{sec:circumcenter}
+
+\begin{center} \includegraphics [scale=0.3] {circle_constr_label.png} \end{center}
+
+Suppose we have three arbitrary points in the plane:  $A$, $B$ and $C$.  
+
+The claim is we can draw a circle that contains all three points on its circumference.  This is the first of several special circles for any triangle, it is called the \emph{circumcircle}.
+  
+\emph{Proof}.
+
+Pick two pairs of points and draw, say, $AB$ and $BC$.
+
+Find the perpendicular bisector of each.  We know that every point on the perpendicular bisector of $AB$ is equidistant from both $A$ and $B$, while for the latter case $BC$ every point is equidistant from $B$ and $C$.
+
+If $Q$ is the point where the bisectors meet, that point equidistant from each of the three points.  We have
+
+\[ QA = QB = QC \]
+
+So if we draw the circle on center $Q$ with radius $QA$ it contains $A$, $B$, \emph{and} $C$.
+
+\begin{center} \includegraphics [scale=0.3] {circle_constr_label.png} \end{center}
+
+$\square$
+
+The question arises whether there is a general rule about $\triangle ABC$ and there is:  if the origin of the circle lies on one of the sides of $\triangle ABC$ then it is a right triangle, that side is a diameter of the circle and the hypotenuse of the right triangle, and the center of the circle bisects the hypotenuse.  This depends on the converse of Thales' circle theorem.
+
+If $\triangle ABC$ contains an angle greater than a right angle, then the center of the circumcircle is not inside the triangle, while if it is acute, the center lies inside the triangle.
+
+We will not prove this now.  Euclid's proof for all three cases is III.31.
+
+\subsection*{Euclid III.1}
+
+\label{sec:find_circle_center}
+
+This is a simple method from Euclid to find the center of a circle.
+
+\begin{center} \includegraphics [scale=0.25] {perp_6.png} \end{center}
+
+\emph{Proof}.
+
+To find the center of any circle, take two points on the circle and draw the chord connecting them, then erect the perpendicular bisector of the chord.  In the diagram above, $CE \perp AB$ and bisects it.
+
+We showed previously that if a point is \emph{not} on this perpendicular bisector, then it cannot be equidistant from $A$ and $B$.  Since the center of the circle $F$ has the property $AF = BF$, it must lie somewhere on $CE$.  
+
+Thus, $CE$ is a diameter of the circle.  Bisect it to find $F$, the center.
+
+$\square$
+
+\subsection*{Thales' circle theorem}
+
+\label{sec:Thales_theorem}
+
+Next we revisit Thales' famous circle theorem:
+
+$\bullet$  Any angle inscribed in a semicircle is a right angle.
+
+Take a diameter of the circle and any third, distinct point.  The three points on the circumference of the circle form a triangle, and the angle at the third vertex is always a right angle.
+
+In the figure below, $\angle ABC$ is a right angle.
+
+\begin{center} \includegraphics [scale=0.14] {EIII_20a.png} \end{center}
+
+\emph{Proof}.
+
+$\triangle OAB$ and $\triangle OBC$ are both isosceles, with radii for the sides.
+
+Hence the base angles are equal.  Let the base angles of the first triangle be $\theta$ and those of the second be $\phi$.  Then the sum of the angles in $\triangle ABC$ is (by I.32)
+\[ \theta + \theta + \phi + \phi = 180 \]
+so
+\[ \theta + \phi = 90 \]
+
+But this is the measure of $B$.  Hence $B$ is a right angle.
+
+$\square$
+
+According to Boyer, this result was known to the Egyptians 1000 years before Thales.  But it is yet another example of knowing a result before proving that it is so.  Archimedes had something to say about the importance of having discovered a fact, before finding a way to prove it.
+
+According to him (in the \emph{Method}, translation by Heath)
+
+\begin{quote}For certain things which first became clear to me by a mechanical method had afterward to be demonstrated by geometry...\textcolor{blue}{it is of course easier, when we have previously acquired by the method some knowledge of questions, to supply the proof than it is to find the proof without any previous knowledge.} 
+\end{quote}
+
+The converse of Thales' theorem is also true.  If the third point of a triangle contains a right angle, then it must lie on the circle where the other two points form the diameter.
+
+\subsection*{Thales' circle theorem converse}
+A nice direct proof of this is given in Acheson.
+
+\label{sec:Thales_circle_theorem_converse}
+
+\emph{Proof}.
+
+\begin{center} \includegraphics [scale=0.4] {Acheson_G59.png} \end{center}
+
+We are given that $\angle APB$ is a right angle.  
+
+Draw $OD$ parallel to $PB$.  $\triangle AOD$ is similar to $\triangle ABP$ because they are both right triangles with a shared vertex at $A$.  
+
+Since $AO$ is one-half $AB$, the scale factor is $1/2$.  In particular, $AD = DP$.
+
+Now draw $OP$.  The two smaller triangles $\triangle AOD$ and $\triangle DOP$ are congruent by SAS.  Therefore, $OP = OA$.  
+
+But $OA$ is a radius of the circle.  Therefore, $OP$ is also a radius.
+
+It follows that $P$ must lie on the circle.
+
+$\square$
+
+
+\end{document}

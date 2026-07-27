@@ -1,0 +1,117 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Menelaus's theorem}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+In this chapter we establish two simple but valuable results.  The first is \hyperref[sec:Menelaus_theorem]{\textbf{Menelaus's theorem}}, due to Menelaus of Alexandria (the geometer, not the mythological figure).  He lived about 100 CE.  It is supposed that Menelaus grew up in Alexandria but he is known to have lived in Rome.
+
+\subsection*{Menelaus's theorem}
+
+\label{sec:Menelaus_theorem}
+
+We provide a proof that relies on similar triangles.
+
+\begin{center} \includegraphics [scale=0.35] {menelaus10.png} \end{center}
+
+Let $\triangle ABC$ have sides $a,b,c$ and consider a transversal of it (the blue line).  Draw the perpendiculars from each vertex to the transversal.  This forms three pairs of similar right triangles.
+
+\emph{Proof}.
+
+We have
+
+\[ \frac{a_1}{a_2} = \frac{h}{g} \ \ \ \ \ \ \ \frac{b_1}{b_2} = \frac{g}{f} \ \ \ \ \ \ \ \ \frac{c}{c'} = \frac{f}{h} \]
+
+Multiplying the three right-hand sides together, we obtain $1$.  So the product of the left-hand sides is also $1$.
+
+\[ \frac{a_1}{a_2} \cdot \frac{b_1}{b_2}  \cdot  \frac{c}{c'}  = 1 \]
+
+$\square$
+
+\begin{center} \includegraphics [scale=0.35] {menelaus10.png} \end{center}
+
+One way to remember the ratios is to make a tour around the triangle.  Start from one vertex and write down the components, numerator first, in the order we encounter them going around the triangle.  For the side opposite $C$ we will redefine the symbol $c$ as shown.  Going counter-clockwise, we go all the way to the end of $c$ and then come back along $c'$ to arrive at the vertex.
+
+There is more to say about Menelaus's theorem but we defer that to the next book.
+
+\label{sec:Ceva_theorem}
+
+\label{sec:ceva_by_menlaus}
+
+\hyperref[sec:ceva_by_menlaus]{\textbf{Ceva's theorem}}
+
+Menelaus's theorem gives an easy proof of Ceva's theorem.
+
+We will show that if the three lines in the figure below are \emph{concurrent} (they all cross at the same point), then the product of the ratios is $1$.
+
+\[ \frac{a_1 \cdot b_1\cdot c_1}{a_2 \cdot b_2\cdot c_2} = 1 \]
+
+\begin{center} \includegraphics [scale=0.35] {ceva_label.png} \end{center}
+
+\emph{Proof}.
+
+Let the sides be $a$, $b$ and $c$ with lines from the vertices drawn through a single point dividing the opposite sides into two parts, as shown.
+
+The side composed of $d+e$ cuts the figure into two sub-triangles.  On the left we have one with sides $d$ and $e$ plus $b_1, b_2$, and $c_1$, with the whole side $c$ as the base of the transversal. 
+
+Apply Menelaus' theorem.
+\[ \frac{d}{e} \cdot \frac{b_1}{b_2} \cdot \frac{c}{c_2} = 1 \]
+
+For the right sub-triangle, apply Menelaus again but go clockwise from the middle:
+\[ \frac{d}{e} \cdot \frac{a_2}{a_1} \cdot \frac{c}{c_1} = 1 \]
+
+Combine the two results:
+\[ \frac{b_1}{b_2} \cdot \frac{c}{c_2} = \cdot \frac{a_2}{a_1} \cdot \frac{c}{c_1} \]
+\[ \frac{a_1}{a_2} \cdot \frac{b_1}{b_2} \cdot \frac{c_1}{c_2} = 1 \]
+
+$\square$
+
+\subsection*{converse}
+
+The converse of Ceva's theorem shows that these three lines are concurrent at a point inside the triangle.  One proof is by contradiction.
+
+\emph{Proof}.
+
+With reference to the figure below
+
+\begin{center} \includegraphics [scale=0.35] {ceva_label.png} \end{center}
+
+Aiming for a contradiction, suppose that some \emph{other} point divides side $a$ into $a_1'$ and $a_2'$ such that the ratio 
+\[ \frac{a_1'}{a_2'} \cdot \frac{b_1}{b_2} \cdot \frac{c_1}{c_2} = 1 \]
+
+but the line to this point on $a$ does not go through point of concurrency.  By the forward theorem, it is also true that 
+\[ \frac{a_1}{a_2} \cdot \frac{b_1}{b_2} \cdot \frac{c_1}{c_2} = 1 \]
+
+As a result, we have
+\[ \frac{a_1'}{a_2'} = \frac{a_1}{a_2} \]
+inverted
+\[ \frac{a_2'}{a_1'} = \frac{a_2}{a_1} \]
+
+\[ \frac{a - a_1'}{a_1'} = \frac{a - a_1}{a_1} \]
+
+Simple algebra will show that
+\[ a_1 = a_1' \]
+They are the same point.  
+
+This is a contradiction.  The line that divides $a$ into $a_1$ and $a_2$ with the correct ratio to multiply the other terms giving 1 must also be concurrent.
+
+$\square$
+
+\end{document}

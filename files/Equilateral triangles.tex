@@ -1,0 +1,230 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Equilateral triangles}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\label{sec:equilateral_triangles}
+
+\subsection*{basic triangle}
+
+An equilateral triangle has all three sides the same length.  By symmetry, as there is no reason to favor one vertex, the three vertices have the same angular measure, namely, $2/3$ of a right angle or $60^\circ$ (since the total is two right angles).
+
+\begin{center} \includegraphics [scale=0.5] {equi_rotated.png} \end{center}
+
+\emph{Proof}.  
+
+By Euclid I.5, the  \hyperref[sec:Euclid_I_5]{\textbf{isosceles triangle theorem}} (equal sides $\rightarrow$ angles), which  can be applied twice to give the result.
+
+$\square$
+
+\emph{Proof}.
+
+Aiming for a contradiction, suppose that one of the angles is larger or smaller than the others. \hyperref[sec:Euclid_I_19]{Euclid I.19} says that if one angle is larger than another in a triangle, then the corresponding side is also longer.  
+
+This is a contradiction.  Hence the angles are the same.  
+
+$\square$
+
+Because adjacent sides are equal in an equilateral triangle, the altitude dropped from any vertex to the opposing base bisects both that base and the angle at the vertex.
+
+\begin{center} \includegraphics [scale=0.3] {iso13.png} \end{center}
+
+\subsection*{area}
+
+In the left panel, the result of bisection is that, for a side of length $2$, half the base is $1$, and then Pythagoras tells us that the altitude is $\sqrt{3}$.  Using the standard formula, the area of this whole triangle is $\sqrt{3}$.
+
+\begin{center} \includegraphics [scale=0.4] {equi1.png} \end{center}
+
+To scale the triangle, write whichever measurement is given.  For example in the middle if we're given a side length of $1$ all lengths are halved.  
+
+On the right, we're given that the altitude is $1$ so then we must multiply by $1/\sqrt{3}$.  To erase that $\sqrt{3}$ in the altitude, we must multiply by its inverse.
+
+Generally, suppose the length of the side is $s$, then the ratio of the altitude to the side is
+\[ \frac{h}{s} = \frac{\sqrt{3}}{2} \]
+
+Therefore twice the area $\mathcal{A}$ of the triangle is
+\[ 2 \mathcal{A} = hs = \frac{\sqrt{3}}{2} \cdot s^2 \]
+
+It can be quicker to rely on the fact that the area goes like the square of the side.  For side length $2$ we had $\mathcal{A} = \sqrt{3}$.  If we shrink the triangle to side length $1$, the area goes down by a factor of four, to $\mathcal{A} = \sqrt{3}/4$.
+
+The paired square root and square makes it awkward to write the side length in terms of the area.
+
+\subsection*{doubled triangle}
+
+\begin{center} \includegraphics [scale=0.35] {equi_pgram_label.png} \end{center}
+
+Let $\triangle ABD$ be an equilateral triangle.  Find $C$ such that $ABCD$ is a parallelogram.
+
+Draw circles on centers $B$ and $C$ with radius equal to the side length.  $\triangle ABD \cong \triangle CDB$ by SSS.  The diagonals bisect the vertex angles.
+
+Parallelogram diagonals cross at their midpoints so $DM = BM$ and $AM = CM$.
+
+$\triangle CBM \cong \triangle CDM$ by SSS.  Thus, the angles at M are right angles.
+
+The whole angles at $B$ and $D$ are 4/3 of a right angle, those at $A$ and $C$ are 2/3 of a right angle, and the bisected versions like $\angle BAM$ are 1/3 of a right angle.
+
+\subsection*{inscribed circle}
+
+\begin{center} \includegraphics [scale=0.4] {equi_inscribed.png} \end{center}
+
+For an equilateral triangle, there is a simple relationship between the side length and the radius of the inscribed circle (the \emph{incircle}).  The figure above is a a proof without words.  
+
+Here are some words:  draw a second equilateral triangle (in blue), with side length $s$.  Let the circle's radius be $r$.  We have (i) $2r = s$, and (ii) $s + r = h$.  Hence, $3r = h$.
+
+\subsection*{side and area in terms of the incircle radius $r$}
+
+We go from the radius of the incircle to the side, altitude, perimeter and area of an equilateral triangle.
+
+\begin{center} \includegraphics [scale=0.5] {Brown1901_4c.png} \end{center}
+
+Draw the perpendicular to the side from the incenter.  We have a 30-60-90 triangle with sides in the ratio $r:2r:\sqrt{3}r$.  In this case, the term with the square root is one-half the side length so
+\[ s = 2 \sqrt{3} \cdot r \]
+
+We can get the altitude by extending that long vertical all the way to the base.
+
+Now we have a 30-60-90 triangle with the base being $s/2 = \sqrt{3} \cdot r$ and then the altitude is $\sqrt{3}$ times that or
+\[ h = 3 r \]
+
+The altitude is three times the radius of the incircle, for an equilateral triangle.
+
+We can now get the area in two different ways, since we know the semi-perimeter is $3/2 \cdot s$ or $3 \sqrt{3} \cdot r $ and the area is just the radius times this
+\[ \mathcal{A} = 3 \sqrt{3} \cdot r^2 \]
+
+Alternatively
+\[ \mathcal{A} = \frac{1}{2} hs = \frac{1}{2} \cdot 3r \cdot  2 \sqrt{3} \cdot r = 3 \sqrt{3} \cdot r^2 \]
+
+\subsection*{circumscribed equilateral triangle}
+
+Draw the circumcircle for equilateral $\triangle ABC$ and then draw the diameter from vertex $C$.  Find where it crosses the $AB$ at $M$.
+\begin{center} \includegraphics [scale=0.2] {equi6.png} \end{center}
+
+We claim that $\triangle QAD$ and $\triangle QBD$ are equilateral.
+
+\emph{Proof}.
+
+$\triangle CAD$ and $\triangle CBD$ are right, by Thales circle theorem.  
+
+$\triangle CAD \cong \triangle CBD$  by HL.  
+
+$C$ is bisected by the diameter, with $\angle ACD = \angle BCD$.
+
+$\triangle CAD$ and $\triangle CBD$ are 30:60:90 triangles with sides in the ratio 1:2:$\sqrt{3}$, so $AD$ is one-half of a diameter, i.e. a radius.
+
+$\square$
+
+$BC$ is bisected at $M$.
+
+\emph{Proof}.
+
+As chords of equal angles $AD = BD$.
+
+$\triangle ACM \cong \triangle ABM$  by SAS.
+
+\begin{center} \includegraphics [scale=0.2] {equi6.png} \end{center}
+
+It follows that the angles at $M$ are right and $AM = BM$.
+
+$\triangle AQM \cong \triangle BQM$ by HL, and $\triangle ADM \cong \triangle BDM$ for the same reason.
+
+So $AM = BM$.
+
+$\square$
+
+ $AQBD$ is a parallelogram
+ 
+ \emph{Proof}
+
+$\angle AQB$ is the central angle on an arc that is 1/3 of the circle.  $\angle ACB$ is an inscribed angle on an arc that is 2/3 of the circle.  By the central angle theorem, they are equal.
+
+$\angle QAD$ and $\angle QBD$ are composed from angles that are corresponding parts of a pair of congruent triangles, so they are equal.
+
+Since it has opposite angles equal, $AQBD$ is a parallelogram.
+
+Thus, $AQ = BD$ and $BQ = AD$.  All four sides of $AQBD$ are equal and they are equal to the radii of the circumcircle including $DQ$.
+
+$\square$
+
+\subsection*{hexagon}
+
+A regular hexagon can be formed from six copies of an equilateral triangle, since 2/3 of a right angle ($60^\circ$) is 1/6 of the four right angles ($360^\circ$) at the center.
+
+\begin{center} \includegraphics [scale=0.4] {equi_hex_crop.png} \end{center}
+
+This is one way to construct the doubled triangle we saw earlier.  Of course , this can be done for any polygon.  It works out nicely for the hexagon, since $360^\circ$ is a multiple of $6$.  But this is a bit arbitrary, since the choice of $360^\circ$ for a full circle is really just a convention.  
+
+\subsection*{problem}
+
+Here is a problem I found in Coxeter \& Greitzer.
+
+\begin{center} \includegraphics [scale=0.7] {Coxeter1_5.png} \end{center}
+
+\begin{center} \includegraphics [scale=0.3] {Coxeter1_5a.png} \end{center}
+I was tempted to think about the angles at the upper right corner of the triangle.  But they can't be equal, not least because if they were, that vertex would lie on the circle.
+
+When we tile the figure with equilateral triangles, the answer becomes clear.
+
+\begin{center} \includegraphics [scale=0.4] {Coxeter1_5b.png} \end{center}
+
+\emph{Proof}.
+
+We have similar equilateral triangles in three different sizes.  They are in the ratio $\frac{1}{3}:\frac{2}{3}:\frac{3}{3}$
+
+It follows that the blue lines divide the diameter into three equal parts.
+
+$\square$
+
+\subsection*{problem}
+
+Construct a regular hexagon and tile it with equilateral triangles.  Show that $BD$ bisects $CQ$ at $M$.  Find where $AM$ cuts $BQ$ at $X$.  Show that $BX = 2 \cdot QX$.
+
+\begin{center} \includegraphics [scale=0.4] {hex_chord.png} \end{center}
+
+\emph{Proof}.
+
+The radii of the circumcircle of the hexagon are equal to the side lengths, allowing the tiling.
+
+Then $CBQD$ has four pairs of sides equal so it is a parallelogram (and a rhombus).  Thus its diagonals bisect one another.
+
+$\angle BQC = \angle ABQ$ so $\triangle MXQ \sim \triangle AXB$ by vertical angles.  
+
+Since $2 MQ = AB$, it follows that the ratio of sides is 2, giving $2 \cdot QX = BX$.
+
+$\square$
+
+\emph{Proof}. (Alternate).
+
+As above, $CBQD$ is a parallelogram.  Let $Y$ be the point where $AM$ is extended to $DC$.  
+
+Then $\triangle AQX \sim \triangle ADY$ with ratio 2, and $\triangle CYM \cong \triangle QXM$.
+
+It follows that $DY = 2 \cdot CY$.  This is the same relationship as for $BX$ and $QX$.
+
+$\square$
+
+\subsection*{problem}
+
+\begin{center} \includegraphics [scale=0.4] {circles_in_rect.png} \end{center}
+
+The three circles are tangent to each other and to the rectangle.
+
+The triangle is equilateral.  Find the area of the rectangle.
+
+\end{document}

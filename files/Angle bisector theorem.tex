@@ -1,0 +1,189 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Euclid's Elements}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\label{sec:angle_bisector}
+
+Here's a classic problem:  can we say anything about the ratio of sides when an internal line is drawn in a triangle?  We first consider the case of a right triangle where the internal line is an angle bisector (left panel, below).  We can prove an important theorem.
+
+\begin{center} \includegraphics [scale=0.14] {angle_bisector_b.png} \end{center}
+
+\subsection*{angle bisector theorem}
+
+\label{sec:angle_bisector_theorem}
+
+\begin{center} \includegraphics [scale=0.15] {angle_bisector_c.png} \end{center}
+
+The bisector forms two new internal triangles.  In the upper one (blue), we draw a line perpendicular to side $b$ which meets the bisector on the side opposite.  This forms two triangles with two angles the same, $\theta$ and the right angle (thus three angles the same), and one side shared.  So we have congruent right triangles by ASA.  
+
+Thus, the two sides labeled $a$ are equal, as are the two sides labeled $c$.
+
+The triangle with sides $c,e,d$ is similar to the whole original triangle, because both are right triangles and the top vertex is shared.  We have that the ratio of the short side to the hypotenuse is
+\[ \frac{a}{b} = \frac{c}{d} \]
+\[ ad = bc \]
+\[ \frac{a}{c} = \frac{b}{d} \]
+
+Tthe sides flanking the duplicated angle are in the same proportion as the parts of the base:
+
+$\square$
+
+\begin{center} \includegraphics [scale=0.15] {angle_bisector_c.png} \end{center}
+
+
+\subsection*{bisector theorem}
+
+The section above uses a right triangle.  However, the result is generally true.  It is called the angle bisector theorem.  Euclid's version is VI.3.
+
+Here is a proof of the general angle bisector theorem by similar triangles.  These involve constructions that either extend the bisector to a line parallel to one side, or extend one side to meet a line parallel to the bisector.  Here we have a parallel to one side.
+
+\begin{center} \includegraphics [scale=0.16] {angle_bisector_r7d.png} \end{center}
+
+Given that the angle at $C$ is bisected.  The claim is that $a/y=b/x$.
+
+\emph{Proof}.
+
+Draw $AE$ parallel to $BC$ and extend the angle bisector to meet it at $E$.   Then the angle at $E$ is equal to the half-angle, by alternate interior angles, 
+
+\begin{center} \includegraphics [scale=0.16] {angle_bisector_r7e.png} \end{center}
+
+We have that $\triangle ACE$ is isosceles, so $b = b'$.
+
+We also have two similar triangles with $\triangle AED \sim \triangle BCD$, since the angles at $D$ are equal by vertical angles.
+
+Form the ratios of the sides opposite vertical angles to the sides opposite the angles marked with red dots:
+\[ \frac{a}{y} = \frac{b'}{x} \]
+
+But since $b = b'$:
+\[ \frac{a}{y} = \frac{b}{x} \]
+
+$\square$
+
+\subsection*{a different view}
+
+This looks like Euclid's proof but it's different because we don't talk about parallels, and we form a new isosceles triangle but it doesn't involve an original side.
+
+Instead, extend the bisector of the angle between $a$ and $b$ to find a point on the circumcircle.
+
+\begin{center} \includegraphics [scale=0.35] {bisector8.png} \end{center}
+
+\emph{Proof}.
+
+By equal angles on equal arcs we find the two marked angles equal to the bisected halves.  We have other equal angles, also by equal arcs.
+
+We must be careful to choose the correct side to put in the ratios.  Recall that for similar triangles in a circle we go in different directions for the two triangles.
+
+Start with the side opposite the vertical angle and go to the blue dotted angle, CCW for $b,m,y$ and CW for $d,x,n$.  We can pick up $b$ and $x$ with
+
+\[ \frac{m}{x} = \frac{b}{d} \]
+
+For the other one it's CW for $a,m,x$ and CCW for  $d,y,n$.  We pick up $a$ and $y$:
+\[ \frac{m}{a} = \frac{y}{d} \]
+
+Rearranging:
+\[ md = bx = ay \]
+\[ \frac{a}{b} = \frac{x}{y} \]
+
+$\square$
+
+As mentioned above, this theorem can be proved with a line parallel to one side and crossing the extension of the bisector, or with a line parallel to the bisector and crossing the extension of a side, or as we did in the circle above, with no parallels.
+
+\begin{center} \includegraphics [scale=0.3] {bisector11.png} \end{center}
+
+The figure shows both ideas with parallels.  The blue triangle extends the bisector to meet a line parallel to one of the sides originating from the other vertex.
+
+The green triangle extends a side to meet a line parallel to the bisector.  In the second case the ratios from similar triangles are obvious.
+
+\subsection*{external angle}
+
+The bisector of an external angle also has a ratio.  The bisector is extended to the extension of a side.  Draw a line internal to the triangle and parallel to the bisector from $C$.  It's not labeled in the figure, but let us call it $X$.
+
+\begin{center} \includegraphics [scale=0.35] {bisector9.png} \end{center}
+
+\emph{Proof}.
+
+We have two similar triangles in $\triangle AXC$ and $\triangle ABF$.  From the parts we have $BX/CF$ and from the whole we have $AB/AF$ so
+\[ \frac{BX}{CF} = \frac{AB}{AF} \]
+
+From the equal angles formed by the bisector we can find equal angles at the base of $\triangle BXC$.  It follows that the triangle is isosceles, with $BX = BC$ so then 
+\[ \frac{BC}{CF} = \frac{AB}{AF} \]
+
+$\square$
+
+\subsection*{problem from Posamentier}
+
+\begin{center} \includegraphics [scale=0.4] {Posamentier_mod_1.png} \end{center}
+
+Let $O$ be the center of the circumcircle of $\triangle ABC$.
+
+Let $CD \perp AB$ and $CX$ bisect $C$ ($\angle ACB$).
+
+Show that $CD$ bisects $\angle ACX$.
+
+\emph{Proof}.
+
+Given $\angle ACX = \angle BCX$.  Draw $OC$.
+
+The central $\angle COB$ is 2 $\angle CAB$.
+
+But $\triangle COB$ is isosceles with equal base angles.
+
+Thus $\angle CAB$ and $\angle BCO$ are complementary.
+
+$\angle ACD$ is also complementary to $\angle CAB$, hence $\angle CAB$ is equal to $\angle BCO$.
+
+\begin{center} \includegraphics [scale=0.4] {Posamentier_mod_1.png} \end{center}
+
+Subtracting equals:  $\angle DCX = \angle OCX$.
+
+$\square$
+
+The angle bisector at $C$ also bisects the angle between the altitude and the radius from $C$.
+
+\emph{Proof}.  (Alternate).
+
+I have redrawn the figure slightly.
+
+\begin{center} \includegraphics [scale=0.4] {Posamentier_mod_2.png} \end{center}
+
+Claim: the altitude and diameter of the circumcircle through $C$ form equal angles with the sides $CA$ and $CB$.
+
+Let $\triangle ABC$ have its circumcircle on center $O$, so $CO$ is a radius.  Extend $CO$ to form the diameter $CF$.
+
+Let $CD$ be the altitude from $C$, so it cuts $AB$ at a right angle and extends to the circle at $E$.
+
+By Thales' circle theorem, $\angle CEF$ is right.  It follows that $EF \parallel AB$.
+
+Parallel chords in a circle cut equal arcs.  (\emph{Proof}.  Connect the opposing ends of the two chords to give equal inscribed angles.  $\square$).
+
+Hence $AE = BF$ and then by inscribed angles, $\angle ACE = \angle BCF$.
+
+$\square$
+
+\begin{center} \includegraphics [scale=0.40] {Posamentier_mod_2.png} \end{center}
+
+By subtraction, the bisector also bisects the angle between the altitude and the radius AO.
+
+Alternatively, find $Y$ as the midpoint of arc $AB$.  
+
+Then we have equal arcs $AY = BY$, $AE = BF$, and $EY = FY$.  Results about the angles follow easily.
+
+\end{document}

@@ -1,0 +1,61 @@
+# First
+
+Lines and angles
+Introduction
+Angles
+Parallel lines
+
+Congruence
+Congruent triangles
+Isosceles triangles
+Euclid I.5
+Bisection
+Hidden assumptions
+
+Area
+Right triangles
+Parallelograms as quadrilaterals
+Rectangles
+Area of a triangle
+
+Similarity
+Right triangle similarity
+Similar triangles
+
+Pythagorean theorem
+Simple proofs of Pythagoras
+Euclid I.47
+Brief review
+
+Circles
+Circles and Thales
+Inscribed angles
+Arcs and chords
+
+Tangents
+Tangents
+Tangent secant theorem
+Incircle
+Excircles
+
+Inscribed polygons
+Cyclic quadrilateral
+Equilateral triangles
+Pentagon
+
+Some classic theorems
+Ptolemy
+Angle bisector theorem
+Hippocrates
+Algebra by geometry
+Menelaus and Ceva
+Centroid and orthocenter
+Pappus's parallelograms
+A challenging problem
+
+Addendum
+Ratio Boxes
+Additional constructions
+List of Theorems
+Author's Notes
+References

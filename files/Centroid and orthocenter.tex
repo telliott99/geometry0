@@ -1,0 +1,157 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Menelaus's theorem}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+$\circ \ $ \ Medians divide the sides in half, and they cross at the centroid.
+
+$\circ \ $ \ Altitudes meet the sides (or their extensions) at right angles, and they cross at the orthocenter.
+
+$\circ \ $ \ The angle bisectors meet at the incenter, the center of the incircle.
+
+Any two lines which are not identical or parallel cross at a point.  Here we are concerned to prove that the third median crosses at the same point --- the three lines are concurrent.
+
+\label{sec:midpoint_theorem}
+
+We saw the \hyperref[sec:midline_theorem]{\textbf{midline theorem}}  earlier:
+
+$\bullet$ \ The midline of a triangle is parallel to the third side of that triangle and one-half its length.
+
+\begin{center} \includegraphics [scale=0.18] {midline_thm.png} \end{center}
+
+This theorem is actually a special case of the general theorems about similar triangles.  Just as for the similarity theorem, the converse is also true.  
+
+\subsection*{application to Ceva's theorem}
+
+\begin{center} \includegraphics [scale=0.3] {centroid_ratio.png} \end{center}
+
+\emph{Proof}.
+
+In $\triangle ABC$ draw the medians $AK$ and $BL$ and find the centroid $G$ where the two medians cross.
+
+Draw $CG$ and extend it across the base at $M$ to meet $AP \parallel LGB$.
+
+Because $LGB \parallel AP$ we have $\triangle CLG \sim \triangle CAP$ in the ratio 1:2.
+
+It follows that $CG = 1/2 \cdot CP$.
+
+But we are given $CK = 1/2 \cdot CB$.
+
+It follows that $\triangle CKG \sim \triangle CBP$ in the ratio 1:2.
+
+By the midline theorem, $AGK \parallel BP$.
+
+Thus $AGBP$ is a parallelogram.
+
+In a parallelogram the diagonals bisect each other so $AM = BM$.
+
+$\square$
+
+This proof is not quite as elegant as the one that comes from Menelaus's theorem.  But the parallelogram provides a very nice, simple approach to the division of the medians at the centroid $G$.  
+
+You can think of the centroid as the center of gravity of $\triangle ABC$.  If it were constructed of a sheet of constant thickness and balanced on the head of a pin, the pin would be at the point $G$.
+
+\subsection*{position of centroid}
+
+The centroid divides the medians in the ratio 2:1.  
+
+\emph{Proof}.
+
+\begin{center} \includegraphics [scale=0.3] {centroid_ratio.png} \end{center}
+
+Given medians and centroid for $\triangle ABC$.
+
+Extend $GM$ to form $PM = GM$.  
+
+Since the diagonals are bisected, $AGBP$ is a parallelogram.
+
+Since $LGB \parallel AP$ and $CL = AL$, we have $\triangle CLG \sim \triangle CAP$ with ratio 1/2 
+
+Thus $CG = GP$.
+
+$GM$ is $1/2 \cdot GP$. so it is also $1/2 \cdot CG$.
+
+$GM$ is 1/3 of the whole length of the median $CM$.
+
+$\square$
+
+\subsection*{area proof}
+
+The medians are lines from each vertex to the midpoint of the opposing side.  
+
+\begin{center} \includegraphics [scale=0.16] {centroid4.png} \end{center}
+
+Ceva's theorem says that if the lines cross at one point then $a_1/a_2 \cdot b_1/b_2 \cdot c_1/c_2 = 1$.  Here we use the converse:  given that the ratios multiply to give 1, the points are concurrent.
+
+For medians each term like $a_1/a_2$ is just 1, so that part is easy.
+
+As we said, the point where the medians meet is called the centroid and is usually given the label $G$.
+
+$\bullet \ $The medians divide any triangle into six small triangles, all with equal area.
+
+\begin{center} \includegraphics [scale=0.16] {centroid4.png} \end{center}
+
+\emph{Proof}.
+
+Write $(\triangle ABC)$ for the area of the triangle.
+
+$(\triangle GBX) = (\triangle GCX)$ by the \hyperref[sec:area_ratio_theorem]{\textbf{area-ratio theorem}}.  They share the same vertex and have equal bases.  Hence the two small triangles on any one side have equal area:  $x = x'$, $y = y'$, $z = z'$.
+
+Also by the same theorem, $(\triangle ABX) = (\triangle ACX)$.  So by subtraction $(\triangle ABG) = (\triangle ACG)$:  $y + y' = z + z'$.  Thus $y = z$.  But this is true for any side.  Hence all six triangles are equal in area.
+
+$\square$
+
+\begin{center} \includegraphics [scale=0.16] {centroid4.png} \end{center}
+
+Consider $\triangle GBX$ and $\triangle ABX$ on base $XGA$.  They have the same altitude, from the base to the vertex at $A$.  The ratio of areas is $1:3$.  So that must also be the ratio $XG:XA$.
+
+The centroid lies one-third of the way up the median from the side.
+
+$\square$
+
+\subsection*{Altitudes}
+
+We had a nice (simple) \hyperref[sec:Newton_altitude]{\textbf{proof}}  from Newton that the altitudes of a triangle are concurrent, earlier in the book.  
+
+Here is another one, based on the converse of Ceva's theorem.
+
+Draw the altitudes in a triangle.  We can show that they are concurrent at a point, called the orthocenter.
+
+This forms three pairs of similar triangles.  Form the ratios of parts of sides to parts of altitudes.
+
+\begin{center} \includegraphics [scale=0.3] {altitudes_Ceva.png} \end{center}
+\[ \frac{a}{b'}  = \frac{e}{g} \ \ \ \ \ \ \ \ \  \frac{b}{c'} =  \frac{g}{j} \ \ \ \ \ \ \ \ \ \frac{c}{a'} = \frac{j}{e}  \]
+
+Multiply together all the terms on the left and separately the terms on the right.  They must be equal, and we can see that the right-hand side cancels to give 1.  Thus
+\[ \frac{a}{b'} \cdot \frac{b}{c'} \cdot \frac{c}{a'} = 1 \]
+\[ \frac{a}{a'} \cdot \frac{b}{b'} \cdot \frac{c}{c'} = 1 \]
+
+By the converse of Ceva's theorem, we have that the altitudes are concurrent.
+
+$\square$
+
+\subsection*{problem}
+
+Use the angle bisector theorem and the converse of Ceva's theorem to show that bisectors of the angles in a triangle meet at a point.
+
+That point is called the incenter.
+
+\end{document}

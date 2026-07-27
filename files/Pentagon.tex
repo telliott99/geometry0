@@ -1,0 +1,81 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Pentagon}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\label{sec:pentagon}
+
+\subsection*{pentagon}
+
+Euclid shows a hexagon circumscribed by a circle through all 6 vertices.
+\begin{center} \includegraphics [scale=0.20] {hex1.png} \end{center}
+
+With the same general idea, we can imagine dividing the circle up into five equal arcs whose endpoints form chords which are the sides of a regular pentagon.  (The pentagon is not \emph{easy}.  How to actually do this construction will be shown in the next book).
+
+In the figure below, we have not drawn the actual circle.
+\begin{center} \includegraphics [scale=0.3] {pent_central_label.png} \end{center}
+
+We can the angles in various ways.  Perhaps the simplest is that  the central angle must be 1/5 of the complete circle and $\angle CAD$ (light red triangle) is one-half that, or $36^\circ$.
+
+The base angles $\angle ACD$ and $\angle ADC$ cut two adjacent arcs.  So the base angles are each twice the measure of the apex angle.  $\triangle ACD$ is isosceles with angles in the ratio $1:2:2$.
+
+Since $B$ cuts 3 arcs and $\angle BAD$ cuts 2, it follows that $AD \parallel BC$.
+
+\begin{center} \includegraphics [scale=0.3] {pent0a.png} \end{center}
+
+We can use the $1:2:2$ ratio to draw a triangle similar to $\triangle CAD$ from above.  In the triangle above, the apex angle $\alpha = 36^\circ$ and base angles $\beta$, where $\beta = 2 \alpha$.
+
+Now draw the transversal to make the yellow triangle isosceles, scaled to divide the original side into parts of length $x$ and $1$.
+
+By sum of angles, the obtuse angle of the yellow triangle is $3 \alpha$, its supplementary angle is $2 \alpha$, so both the yellow and the red triangle are isosceles.  The red one is similar to the original with base angles equal to $\beta$.
+
+By similar triangles we have
+\[ \frac{x+1}{x} = \frac{x}{1} \]
+\[ x^2 = x + 1 \]
+The solution to this quadratic equation is usually given the symbol $\phi$, the famous golden ratio.
+
+\begin{center} \includegraphics [scale=0.3] {pent0a.png} \end{center}
+
+Use the quadratic formula to obtain the positive root:
+\[ \phi = \frac{1 + \sqrt{5}}{2} \]
+
+\subsection*{problem}
+
+\begin{center} \includegraphics [scale=0.35] {phi_circle.png} \end{center}
+
+Here's another construction in the collection curated by Bogomolny, from John Arioni.  Let the diameter of the circle be $1$, so the rectangle has sides of length $1$ and $2$ and the diameter is $\sqrt{5}$.
+
+The distance from corner to corner is twice the distance from the corner to the center of the circle, or $\sqrt{5}/2$.  Add another $1/2$ to go to the edge of the circle and we have $\phi$.
+
+Let the distance to go the rest of the way be $x$.  We have 
+\[ x = \sqrt{5}/2 - 1/2 \]
+\[ = \sqrt{5}/2 + 1/2 - 1 \]
+\[ = \phi - 1 \]
+
+Finally, recall that 
+\[ \phi^2 = \phi + 1 \]
+\[ \phi = 1 + \frac{1}{\phi} \]
+
+So $\phi - 1 = 1/\phi$.
+
+$\square$
+
+\end{document}

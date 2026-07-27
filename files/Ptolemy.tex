@@ -1,0 +1,124 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Ptolemy's theorem}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{Introduction}
+
+\label{sec:Ptolemy}
+
+Ptolemy was a Greek astronomer and geographer who probably lived at Alexandria in the 2nd century AD (died c.168 AD).  That is nearly 500 years after Euclid.  (Ptolemy was a popular name for Egyptian pharaohs in earlier centuries).
+
+Our Ptolemy is known for many works including his book the \emph{Almagest}, and important to us here, for a theorem in plane geometry concerning cyclic quadrilaterals.  These are 4-sided polygons with all four vertices on the same circle.  
+
+Recall that any triangle lies on a circle, so this is a restriction on the fourth vertex of the polygon.
+\begin{center} \includegraphics [scale=0.3] {circles_4.png} \end{center}
+
+Also recall the \hyperref[sec:quadrilateral_supplementary]{\textbf{quadrilateral supplementary theorem}} (Euclid III.22):
+
+$\bullet$ \ For \emph{any} quadrilateral whose four vertices lie on a circle, the opposing angles are supplementary (they sum to $180^\circ$).
+
+Now, draw the diagonals $AC$ and $BD$.  Ptolemy's theorem says that if we take the products of the two pairs of opposing sides and add them, the result is equal to the product of the diagonals.
+
+\begin{center} \includegraphics [scale=0.5] {pt1.png} \end{center}
+
+Notice that in the special case of a rectangle, the two diagonals are equal.  Given the proof here, Ptolemy's result furnishes a trivial proof of the Pythagorean theorem (see later).
+
+Because of the diagonals, we have four pairs of equal angles, one for each side.
+
+\begin{center} \includegraphics [scale=0.4] {ptpar1.png} \end{center}
+
+
+\subsection*{Ptolemy's theorem}
+
+A  traditional proof relies on similar triangles.
+
+\begin{center} \includegraphics [scale=0.35] {pt_angles1.png} \end{center}
+
+\emph{Proof}.
+
+The four sides are labeled $a$, $b$, $c$ and $d$ plus two diagonals $x$ and $y$.
+
+$x$ is divided into two parts $x_1$ and $x_2$.  
+
+The point of division into $x_1$ and $x_2$ is found by constructing a line from the vertex at the upper left down to $x$, such that the angle formed is equal to the one between $d$ and $y$.  The equal angles are marked with red dots.  
+
+Other equal angles are obtained by the inscribed angle theorem.
+ 
+By similar triangles
+\[ \frac{x_1}{a} = \frac{c}{y} \]
+
+The second set of similar triangles is obtained by re-considering the angles at the upper left as composed of the red dotted one plus the central one.  Again, we get other angles by equal arcs.
+\begin{center} \includegraphics [scale=0.35] {pt_angles2.png} \end{center}
+
+By similar triangles
+\[ \frac{x_2}{d} = \frac{b}{y} \]
+and then
+\[ x_1y + x_2y =  ac + bd \]
+\[ xy = ac + bd \]
+
+$\square$
+
+\subsection*{Pythagorean theorem from Ptolemy}
+
+\label{sec:PProof_Ptolemy}
+
+\begin{center} \includegraphics [scale=0.16] {Pyth_Ptolemy2.png} \end{center}
+
+\emph{Proof}.
+
+Consider an arbitrary rectangle, with all four vertices as right angles, and opposing sides equal.
+
+The diagonals are equal, by our theorem on diagonals of a rectangle, and they bisect one another, by a general theorem about diagonals of a quadrilateral.  Therefore, a circle can be drawn whose center is the point where they cross and that circle contains the four vertices.
+
+One can also start with a circle, then draw a diameter and any other point, forming a right triangle, by the converse of Thales' circle theorem.  Draw the congruent triangle in the other hemisphere by SSS.  We have opposite sides equal and at least one right angle, so the polygon is a rectangle.
+
+Application of Ptolemy's theorem gives:
+\[ AB \cdot CD + BC \cdot AD = AC \cdot BD \]
+but by equal sides in a rectangle and diameters in a circle:
+\[ AB^2 + BC^2 = AC^2 \]
+
+$\square$
+
+\subsection*{equilateral triangle}
+
+\begin{center} \includegraphics [scale=0.2] {equi4.png} \end{center}
+
+Inscribe an equilateral triangle in a circle and pick any point on the circle.
+
+\[ ps = qs + rs \]
+\[ p = q + r \]
+
+This is quite challenging to do without the Theorem;  we will leave it for another day.
+
+\subsection*{pentagon}
+
+The theorem makes short work of the pentagon.  
+
+Recall that we developed the regular pentagon in terms of its circumscribing circle.  Thus, any four vertices lie on a circle and define a cyclic quadrilateral.
+
+\begin{center} \includegraphics [scale=0.3] {pentagon_crop.png} \end{center}
+
+Let the chords such as $AC$ be equal to $\phi$ and any side equal to $1$.  Then for $AEDC$ the product of the diagonals is $\phi^2$ while the sum of the products of opposite sides is just $\phi + 1$.  These are equal, so we're done.
+
+$\square$
+
+\end{document}

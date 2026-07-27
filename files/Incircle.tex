@@ -1,0 +1,131 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Euclid's Elements}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{incircle}
+
+\label{sec:incenter}
+
+For any triangle it is possible to draw a circle, called its incircle, which is tangent to all three sides.  When stated in this way, it does not seem obvious how to actually do it.
+
+\begin{center} \includegraphics [scale=0.5] {incircle3.png} \end{center}
+
+\emph{Proof}.
+
+Let $AI$ be the bisector of $A$ and $BI$ be the bisector of $B$, meeting at $I$.
+
+Recall that if we construct the bisector of an angle, say $AI$ bisecting $A$, then every point on the bisector is equidistant from the sides of the original angle.
+
+So one can draw two right triangles with sides $r$ and $AI$, which are congruent by HL, explaining the labels $x$.
+
+The point $I$ is equidistant from side $c$ opposite $C$ and side $b$ opposite $B$.
+
+But the same thing can be done for $BI$ bisecting $B$.
+
+Then draw the circle on center $I$ with radius $r$, and we're done.  This circle is the incircle for $\triangle ABC$.
+
+$r$ is a radius and at the point where it touches the side, perpendicular.  Thus the three sides are each tangent to the incircle.
+
+$\square$
+
+We can obtain two simple results.
+
+First, the area of the triangle is the sum of two copies of each of the three types of right triangle:  $\mathcal{A} = rx + ry + rz$.  But the perimeter of the triangle is twice $x + y + z$, the semi-perimeter $s = x + y + z$ and then
+
+\[ \mathcal{A} = rs \]
+
+Also, we have that 
+\[ s = x + y + z \] 
+but $y + z = a$ ($a$ is the side opposite the vertex $A$) so:
+\[ s = x + a \]
+\[ x = s - a \]
+
+The tangent adjacent to vertex $A$ has the length $s - a$.
+
+\subsection*{Pythagoras incircle proof}
+
+\label{sec:PProof_incircle}
+
+Dunham gives this as a problem.
+
+Let right $\triangle ABC$ have sides opposite $a$, $b$ and $c$, as usual.
+
+Let the parts of the sides be $x$ and $y$.  Note that since this is a right triangle, what would be $z$ becomes $r$, the radius of the incircle.
+
+Also, $c = x + y$ is the hypotenuse.
+
+Using the previous result
+\[ r = s - c = \frac{a + b - c}{2} \]
+
+\begin{center} \includegraphics [scale=0.35] {pyth25.png} \end{center}
+
+The area of the triangle can be computed as the sum of three quadrilaterals
+\[ K = r^2 + rx + ry \]
+\[ = r(r + c) \]
+
+Recall that $c = x + y$ and $r = z$ so $r + c = s$, the semiperimeter, or simply remember the result
+\[ \mathcal{A} = rs \]
+
+In any event, we have that $r = s - c$.  Substitute for $r$ from above
+\[ K = (s - c)s = \frac{a + b - c}{2}  \cdot \frac{a + b + c}{2}  \]
+
+We also have that
+\[  K = \frac{ab}{2} \]
+so
+\[ \frac{ab}{2} = \frac{a + b - c}{2} \cdot \frac{a + b + c}{2}  \]
+\[ 2ab = (a + b - c)(a + b + c)  \]
+\[ = (a + b)^2 - c^2 \]
+
+Expanding and canceling we get
+\[ a^2 + b^2 - c^2 = 0 \]
+
+Rearrange to obtain the Pythagorean relationship.
+
+$\square$
+
+\subsection*{extended angle bisector}
+
+When the angle bisectors are extended to the circumcircle, they form isosceles triangles.
+
+\emph{Proof}.
+
+\begin{center} \includegraphics [scale=0.35] {extended_bisector.png} \end{center}
+
+In the figure above, the incircle is drawn on center $I$ and the angle bisectors as well.  Extend one of them to meet the circumcircle at $D$.
+
+The equal angles produced by bisection are marked with dots.  $\angle BDI = A$ by equal angles on equal arcs.
+
+In $\triangle DBI$, $\angle DBI$ is composed of two angles:  one has a red dot because it lies on an arc equal to that for the half-angle at $C$, often called $\gamma$.
+
+The other one has a blue dot because it is the half-angle of $B$, often called $\beta$.
+
+By sum of angles then, $\angle DIB = \angle DBI = \beta + \gamma$.
+
+It follows that $\triangle DBI$ is isosceles, with $BD = ID$.
+
+A similar result is obtained for $\triangle DAI$
+
+$\square$
+
+
+
+\end{document}

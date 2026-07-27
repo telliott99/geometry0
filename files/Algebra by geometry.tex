@@ -1,0 +1,115 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Tangent-secant theorem}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+Let us start with two propositions from Book II of \emph{Elements}, which deal with what might be termed geometric algebra.
+
+\subsection*{Euclid II.5}
+
+\label{sec:Euclid_II_5}
+
+\begin{center} \includegraphics [scale=0.45] {EII_5_crop.png} \end{center}
+
+%\begin{center} \includegraphics [scale=0.25] {gnomon1.png} \end{center}
+
+In this figure, the line $AB$ is bisected at $C$ with $AC = BC$ and then the point $D$ placed somewhere within the segment $BC$.  
+
+II.5 says that
+\[ AD \cdot BD + CD^2 = BC^2 \]
+
+It may make more sense if we try algebra first.  Let $x = AC$ and $y = CD$ so $AD = x + y$ and $BD = x - y$ and then
+
+\[ AD \cdot BD = x^2 - y^2 \]
+
+and we can read these off the diagram:
+\[ AD \cdot BD = BC^2 - CD^2 \]
+\[ AD \cdot BD + CD^2  = BC^2 \]
+
+$ AD \cdot BD$ is the area of rectangle $ADHK$.  It is common to refer to rectangles by the points at opposite corners.  So $ADHK$ can be called $AH$.
+
+\begin{center} \includegraphics [scale=0.45] {EII_5_crop.png} \end{center}
+
+The construction contains several equal rectangles.  The most obvious is $AL = CM$.  And the second is $CH = HF$.  
+
+This is by I.43.  In the figure below, the two white parallelograms are equal.
+\begin{center} \includegraphics [scale=0.15] {EI_43.png} \end{center}
+
+We saw an example very early for rectangles as the \hyperref[sec:area_ratio_theorem]{\textbf{area-atio theorem}}.
+\begin{center} \includegraphics [scale=0.5] {Acheson_G42.png} \end{center}
+\[ ad = bc \]
+
+Returning to the present theorem
+\begin{center} \includegraphics [scale=0.45] {EII_5_crop.png} \end{center}
+
+Here's the neat idea: the rectangle $AH$ is equal in area to the L-shaped piece called a \emph{gnomon}:  $CBFGHL$.  
+
+And if we add $LG$ (equal to $CD^2$) to that we have $CF$ (equal to $BC^2$).
+
+\[ AD \cdot BD + CD^2  = BC^2 \]
+
+In Joyce's annotated \emph{Elements} he says (paraphrasing) that this solves a quadratic.  Suppose we are asked
+
+\begin{quote} Find two numbers $x$ and $y$ so that their sum is a known value $b$ and their product is a known value $c^2$. \end{quote}
+
+In modern terms:
+\[ x (b-x) = c^2 \]
+\[ x^2 - bx + c^2 = 0 \]
+\[ x = \frac{b}{2} \pm \ \sqrt{(\frac{b}{2})^2 - c^2} \]
+
+\begin{center} \includegraphics [scale=0.25] {EII_5d.png} \end{center}
+
+To solve this geometrically, draw the circle on center $Q$ with radius $QB = b/2 = QS$, and $AB = b$.
+
+Let $c = DS$.
+
+$\triangle QDS$ is right, so from Pythagoras, the distance $QD^2$ is:
+\[ QD^2 = (\frac{b}{2})^2 - DS^2 \]
+
+By the principle of the mean proportion, $DS^2 = AD \cdot BD = x \cdot (b-x)$.
+
+and
+\[ AD = AQ + QD \]
+\[ =  \frac{b}{2} + \ \sqrt{(\frac{b}{2})^2 - c^2} \]
+is equal to $x$.
+
+\subsection*{Euclid II.6}
+
+\label{sec:Euclid_II_6}
+
+The second theorem is very similar but has the point $P$ located on an extension of $AB$:
+
+\begin{center} \includegraphics [scale=0.4] {EII_6_crop.png} \end{center}
+
+The result is nearly the same as before, just with the squares switched:
+\[ AD \cdot BD  + BC^2 = CD^2 \]
+although $AD$ is not what it used to be.  
+
+One way to remember:  the difference of squares must be positive.  In the first case $BC > CD$, and in the second, $CD > BC$.
+
+Again we have a gnomon and a difference of squares.  The gnomon is equal to the whole rectangle $AD \cdot BD$ and when added to $BC^2$ we get the whole large square $CD^2$
+\[ AD \cdot BD  + BC^2 = CD^2 \]
+
+In algebraic terms we let $AC = x$ and now $BD = y$ so
+\[ (2x + y) y + x^2 = 2xy + y^2 + x^2 = (x + y)^2 \]
+
+
+\end{document}
