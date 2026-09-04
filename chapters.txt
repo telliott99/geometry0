@@ -51,7 +51,6 @@ Algebra by geometry
 Menelaus and Ceva
 Centroid and orthocenter
 Pappus's parallelograms
-A challenging problem
 
 Addendum
 Ratio Boxes

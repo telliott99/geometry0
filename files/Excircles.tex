@@ -25,13 +25,13 @@
 
 In the figure below we see $\triangle ABC$ and its incircle on center $I$.  Three more circles or parts of them are drawn.  They have the property that each one is tangent to a different side of the original $\triangle ABC$ and also tangent to extensions of the other sides.
 
-\begin{center} \includegraphics [scale=0.4] {excircle_intro1.png} \end{center}
+\begin{center} \includegraphics [scale=0.35] {excircle_intro1.png} \end{center}
 
 In the next figure we draw just one excircle for $\triangle ABC$, the one tangent to side $a$ opposite $A$.
 
 The easiest method to find the center of the excircle, called $I_a$, is to bisect the external angles at $B$ and $C$ and find where they intersect, then draw $AI_a$ 
 
-\begin{center} \includegraphics [scale=0.4] {excircle_intro3.png} \end{center}
+\begin{center} \includegraphics [scale=0.3] {excircle_intro3.png} \end{center}
 
 $I_a$ lies on the bisector of $A$.  (\emph{Proof}.  Drop perpendiculars to the extensions of the sides at $D$ and $E$, forming two congruent triangles by HL.  $\square$)
 
@@ -47,15 +47,32 @@ Also, $I_aF = I_aE$, so $I_aF$ is then a radius of the circle.
 
 Since $IaF$ is perpendicular to $BC$ at $F$, $BFC$ is tangent, with $CE = CF$ (as we're given) and also $BD = BF$.
 
+Since $BI$ bisects $B$, while $BI_a$ bisects the external angle at $B$, namely $\angle CBD$, it follows that $IBI_a$ is a right angle.  Therefore the other angles at $B$ add up to 90 and so they are also complementary:
+\[ \angle ABI + \angle IaBD = 90 \]
+
+\begin{center} \includegraphics [scale=0.3] {excircle_intro3.png} \end{center}
+
+Let the perpendicular from $I$ meet $AB$ at $Z$ and consider $\triangle IZB$ which is a right triangle.
+
+Comparing with $\triangle BDI_a$ and remembering the angles we found complementary, we see that the two triangles are similar:
+
+\[ \triangle IZB \sim \triangle BDI_a \]
+
+\begin{center} \includegraphics [scale=0.35] {excircle_crop5.png} \end{center}
+
+This has a number of consequences that we'll come back to in the next book.
+
+\subsection*{intersection of side $a$ and the bisector of $A$}
+
 One neat property of the excircle can be seen more easily with an obtuse angle at $B$ or $C$.  We choose $B$.
 
-\begin{center} \includegraphics [scale=0.35] {excircle_intro4.png} \end{center}
+\begin{center} \includegraphics [scale=0.3] {excircle_intro4.png} \end{center}
 
 Find where $BC$ crosses the bisector at $S$.  Find the tangent from $S$ to the incircle at $T$.  $SX$ is also tangent to the incircle from $S$, so $SX = ST$.
 
 Drop the perpendiculars from $I$ to the sides at $X$, $Y$, $Z$ and $T$.
  
-Finally, extend $ST$ to meet side $AC$ at $B'$ and go back to meet side $AB$ at $C'$.
+Finally, extend $ST$ to meet side $AC$ at $B'$ and go back to meet the extension of side $AB$ at $C'$.
 
 The labels give a hint of where we're going.
 
@@ -63,7 +80,9 @@ From $ST=SX$ we get congruent right triangles $\triangle SIT \cong \triangle SIX
 
 There are two more congruent triangles $\triangle ABS \cong \triangle AB'S$ by ASA.
 
-This has a number of consequences, but we will leave this here for you to work with as an exercise.  We'll come back to it in the next book.
+So $AB = AB'$, $B = B'$, and then by sum of angles $C = C'$.
+
+It follows that $\triangle ABC \cong \triangle AB'C'$ by ASA.
 
 $\square$
 

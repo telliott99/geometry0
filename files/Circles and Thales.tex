@@ -63,38 +63,6 @@ This is a contradiction.  Hence any diameter divides the circle into two equal p
 
 $\square$
 
-\subsection*{circle containing three points}
-
-\label{sec:circumcenter}
-
-\begin{center} \includegraphics [scale=0.3] {circle_constr_label.png} \end{center}
-
-Suppose we have three arbitrary points in the plane:  $A$, $B$ and $C$.  
-
-The claim is we can draw a circle that contains all three points on its circumference.  This is the first of several special circles for any triangle, it is called the \emph{circumcircle}.
-  
-\emph{Proof}.
-
-Pick two pairs of points and draw, say, $AB$ and $BC$.
-
-Find the perpendicular bisector of each.  We know that every point on the perpendicular bisector of $AB$ is equidistant from both $A$ and $B$, while for the latter case $BC$ every point is equidistant from $B$ and $C$.
-
-If $Q$ is the point where the bisectors meet, that point equidistant from each of the three points.  We have
-
-\[ QA = QB = QC \]
-
-So if we draw the circle on center $Q$ with radius $QA$ it contains $A$, $B$, \emph{and} $C$.
-
-\begin{center} \includegraphics [scale=0.3] {circle_constr_label.png} \end{center}
-
-$\square$
-
-The question arises whether there is a general rule about $\triangle ABC$ and there is:  if the origin of the circle lies on one of the sides of $\triangle ABC$ then it is a right triangle, that side is a diameter of the circle and the hypotenuse of the right triangle, and the center of the circle bisects the hypotenuse.  This depends on the converse of Thales' circle theorem.
-
-If $\triangle ABC$ contains an angle greater than a right angle, then the center of the circumcircle is not inside the triangle, while if it is acute, the center lies inside the triangle.
-
-We will not prove this now.  Euclid's proof for all three cases is III.31.
-
 \subsection*{Euclid III.1}
 
 \label{sec:find_circle_center}
@@ -140,6 +108,10 @@ But this is the measure of $B$.  Hence $B$ is a right angle.
 
 $\square$
 
+Euclid's proof of this theorem is III.31.  Rather than using the sum of angles, he extends $AB$ external to the circle to $F$, forming $\angle FBC$.  Then $\angle ABC = \angle OAB + \angle OCB$ because $\triangle OAB$ and $\triangle OBC$ are both isosceles;  but $\angle FBC$ is external to $\triangle ABC$, so it is equal to the same two angles.  Therefore $\angle FBC = \angle ABC$.  It follows that both angles are right.  $\square$
+
+\begin{center} \includegraphics [scale=0.14] {EIII_20a.png} \end{center}
+
 According to Boyer, this result was known to the Egyptians 1000 years before Thales.  But it is yet another example of knowing a result before proving that it is so.  Archimedes had something to say about the importance of having discovered a fact, before finding a way to prove it.
 
 According to him (in the \emph{Method}, translation by Heath)
@@ -172,5 +144,36 @@ It follows that $P$ must lie on the circle.
 
 $\square$
 
+\subsection*{circle containing three points}
+
+\label{sec:circumcenter}
+
+\begin{center} \includegraphics [scale=0.3] {circle_constr.png} \end{center}
+
+Suppose we have three arbitrary points in the plane:  $A$, $B$ and $C$.  
+
+The claim is we can draw a circle that contains all three points on its circumference.  This is the first of several special circles for any triangle, it is called the \emph{circumcircle}.
+  
+\emph{Proof}.
+
+Pick two pairs of points and draw, say, $AB$ and $BC$.
+
+Find the perpendicular bisector of each.  We know that every point on the perpendicular bisector of $AB$ is equidistant from both $A$ and $B$, while for the latter case $BC$ every point is equidistant from $B$ and $C$.
+
+If $Q$ is the point where the bisectors meet, that point equidistant from each of the three points.  We have
+
+\[ QA = QB = QC \]
+
+So if we draw the circle on center $Q$ with radius $QA$ it contains $A$, $B$, \emph{and} $C$.
+
+\begin{center} \includegraphics [scale=0.3] {circle_constr.png} \end{center}
+
+$\square$
+
+The question arises whether there is a general rule about $\triangle ABC$ and there is:  if the origin of the circle lies on one of the sides of $\triangle ABC$ then it is a right triangle, that side is a diameter of the circle and the hypotenuse of the right triangle, and the center of the circle bisects the hypotenuse.  This depends on the converse of Thales' circle theorem.
+
+If $\triangle ABC$ contains an angle greater than a right angle, then the center of the circumcircle is not inside the triangle, while if it is acute, the center lies inside the triangle.
+
+We will not prove this now.  Euclid's proof for all three cases is III.31.
 
 \end{document}

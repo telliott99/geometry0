@@ -31,13 +31,17 @@ The theorems from the previous chapter about supplementary and vertical angles s
 
 \begin{center} \includegraphics [scale=0.20] {parallel_postulate2.png} \end{center}
 
-Euclid says that if (in the left panel) $\theta + \phi$ is less than two right angles, the two lines must eventually meet somewhere if extended far enough (to the right).
+Euclid is saying that if (in the left panel) $\theta + \phi$ is less than two right angles, the two lines must eventually meet somewhere if extended far enough (to the right).
 
 Of course the fact that they meet means they cannot be parallel lines, since two parallel lines never meet.
 
-He does not worry about the case where the sum of $\theta + \phi$ is greater than two right angles.  If the sum is less on the right-hand side of the transversal, it will be greater on the left-hand side.  \emph{Problem}.  Prove this.
+He does not worry about the case where the sum of $\theta + \phi$ is greater than two right angles.  If the sum is less on the right-hand side of the transversal, it will be greater on the left-hand side.  
 
-The other two panels also show parallel lines.  The known equal angles have different names in these cases, but we will not worry about that.  We refer to all of them as examples of lines parallel by equal \emph{alternate interior angles}, even though technically, that only refers to the middle panel.
+\emph{Problem}.  Prove this.
+
+The other two panels also show parallel lines.  The known equal angles have different names in these cases, but we will not worry about the different names.  
+
+We refer to all of them as examples of lines parallel by equal \emph{alternate interior angles}, even though technically, that only refers to the middle panel.
 
 Here is a graphic that makes it easy to remember:
 \begin{center} \includegraphics [scale=0.4] {lines_angles_4.png} \end{center}
@@ -58,7 +62,9 @@ However, you may have noticed that what we actually wrote was $P$ \emph{if and o
 
 The meaning of \emph{if and only if} is simply that both $P \Rightarrow Q$ \emph{and} $Q \Rightarrow P$.
 
-If the sum of the adjacent interior angles is equal to two right angles, then the two lines being traversed are parallel.
+If two lines being traversed are parallel, then the sum of the adjacent interior angles is equal to two right angles.
+
+And, if the sum is equal to two right angles, then the two lines being traversed are parallel.
 
 \subsection*{extending the result}
 
@@ -70,9 +76,7 @@ The indicated angles are equal because they are alternate interior angles of two
 
 In the middle panel, two additional equalities are established by the vertical angle theorem.  Then on the right, we use the supplementary angle theorem.
 
-Note that the conclusions for the angles marked with a red dot are themselves consistent with the three postulates/theorems that we have so far:  supplementary and vertical angles and alternate interior angles.
-
-This postulate is also valid in reverse.  If we have a line that traverses two others so as to give interior angles summing to $180^{\circ}$, then the two lines must be parallel.
+Note that the conclusions for the angles marked with a red dot are themselves consistent with parallel lines:  supplementary and vertical angles and alternate interior angles.
 
 \subsection*{symmetry}
 
@@ -116,13 +120,13 @@ William Dunham has written a lot about the history of mathematics in Greece, sta
 
 \label{sec:triangle_sum_theorem}
 
-We come to our first truly novel theorem.  It relies on everything we've said so far.  It is attributed to Thales, one of three elementary but novel theorems for which he is thought to have developed proofs.
+We come to our first truly novel theorem.  It relies on everything we've said so far, but especially on the parallel postulate and ideas about alternate interior angles.
+
+It is attributed to Thales, one of three elementary but very important theorems for which he is thought to have developed proofs.
 
 $\bullet$  The sum of the three angles in any triangle is equal to two right angles.
 
 \begin{center} \includegraphics [scale=0.3] {triangle_sum_angles.png} \end{center}
-
-This theorem depends on the ideas we developed above.  
 
 \emph{Proof}.
 
@@ -136,9 +140,11 @@ A simple variation on this proof uses the angles above the line.
 
 \begin{center} \includegraphics [scale=0.6] {triangle_sum_angles2.png} \end{center}
 
-There are two more famous theorems ascribed to Thales, one in the next chapter, and one about circles that we mentioned in the beginning.
+There are two more famous theorems ascribed to Thales, one in the next chapter, and the one about circles that we mentioned in the beginning.
 
-Heath says that rather than Thales, Pythagoras is responsible for the triangle sum proof.  Since it's not clear that Pythagoras knew any geometry, I'm happy to stick with Thales.  No one knows, unfortunately.
+Heath says that rather than Thales, Pythagoras is responsible for the triangle sum proof.  Since it's not clear that Pythagoras knew any geometry, I'm happy to stick with Thales.  
+
+No one knows, unfortunately.  An extensive history was written but it has been lost.
 
 \subsection*{problem}
 
@@ -169,8 +175,6 @@ This figure makes a proof without words:
 
 Here is a different proof of sum of angles in a triangle.  This one is from Lara Alcock (\emph{Mathematics Rebooted}).
 
-It never hurts to re-prove important results by a different method.  This serves as a check on both the result and the methods.
-
 Imagine walking around the perimeter of a triangle in the counter-clockwise direction.  At each vertex we turn left by a certain angle, called the exterior (external) angle.  After passing through all three vertices, we will end up facing in the same direction as we started.
 
 We have made one complete turn, the sum of the exterior angles is $4$ right angles.
@@ -188,6 +192,42 @@ Subtract the first equation from the second
 $\square$
 
 Note:  both terms, exterior angle and external angle, are used to describe the same angle by different writers.  I'm not aware of a reason to prefer one or the other.
+
+\subsection*{note about Euclid}
+
+At this point, I have to confess that we have played rather fast and loose with Euclid's Book I.  This was so as to focus on the sum of angles theorem and the external angle theorem right away.  
+
+What Euclid actually does is called I.16, the 16th proposition of Book I of \emph{Elements}.  I would call this a weak form of the external angle theorem:
+
+$\bullet$ \ The external angle of a triangle is greater than either of the opposite internal angles.
+
+I.16 does not use the sum of angles or alternate interior angles.  The proof is a bit awkward so let's skip forward for now.
+
+The first time he really gets to using the parallel postulate, in I.27, he says
+
+$\bullet$ \ If a straight line falling on two straight lines make the alternate angles equal to one another, the straight lines will be parallel to one another.
+
+\begin{center} \includegraphics [scale=0.3] {EI_27.png} \end{center}
+
+The proposition is that equal alternate angles gives parallel lines.  The proof is to assume the opposite and derive a contradiction.  Suppose that the alternate angles are equal to each other.
+
+So let $\theta = \phi$.  
+
+\emph{Proof}.
+
+Aiming for a contradiction, suppose that the lines meet at a point.  This forms a triangle.
+
+By I.16, the external angle theorem, we have that $\theta > \phi$.  
+
+By the strong form of the theorem (I.32) $\theta = \phi + \alpha$.  
+
+But all this is a contradiction.  We are given that $\theta = \phi$.
+
+So the assumption that two lines with equal alternate angles meet is false.
+
+Thus, they are parallel.
+
+$\square$
 
 \subsection*{problem}
 

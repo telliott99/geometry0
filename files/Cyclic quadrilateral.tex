@@ -53,32 +53,27 @@ $\square$
 
 \subsection*{converse of cyclic quadrilateral theorem}
 
-This one uses Euclid III.22 rather than III.21.  
-
 \label{sec:inscribed_angles_converse2}
 
-Let $\triangle ABC$ lie on a circle.  
+\begin{center} \includegraphics [scale=0.3] {cq_conv} \end{center}
 
-Let point $D$ be such that $\angle ADC$ is supplementary to $\angle ABC$.
+Let $\triangle ABC$ lie on a circle with $B = \theta$, subtended by arc $AC$.
 
-Then $D$ lies on the same circle.
-\begin{center} \includegraphics [scale=0.22] {cyclic_quad_converse_b} \end{center}
+If another point $D$ is subtended by the same arc, and has the same measure, it lies on the same circle.
 
 \emph{Proof}.
 
-Aiming for a contradiction, suppose $D$ does not lie on the circle.
+Aiming for a contradiction, suppose $D$ has measure $\theta$ and intercepts the arc but does not lie on the circle.  Suppose it is external.
 
-Let $D$ be external and $D'$ lie on the point where $BD$ cuts the circle (right panel).  
+By Euclid III.21, any point lying on the circle and intercepting the same arc also has measure $\theta$.  Let $E$ on $AD$ be such a point with $\angle DCE = \alpha$.
 
-By the forward theorem, $\angle AD'C$ is supplementary to $\angle ABC$ and so equal to $\angle ADC$.
+But then, by the external angle theorem, we have $\theta + \alpha = \theta$.
 
-But by Euclid I.21,  $\angle ADC < \angle AD'C$.  
+This is absurd.
 
-This is a contradiction.  Therefore $D$ is not external.  
+There cannot be such a point $D$.
 
-A similar argument will show that $D$ is not internal.  
-
-Therefore $D$ lies on the circle and $D$ and $D'$ are the same point.
+A similar argument shows $D$ cannot be inside the circle.  Simply find $E$ by extending $AD$ to the circle.
 
 $\square$
 
